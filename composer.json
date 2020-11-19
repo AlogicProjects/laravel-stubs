@@ -11,7 +11,7 @@
             "AlogicProjects\\LaravelStubs\\": "src"
         }
     },
-    "config": {
+    "config": { 
         "sort-packages": true
     },
     "extra": {
