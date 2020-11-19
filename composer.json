@@ -11,7 +11,7 @@
             "AlogicProjects\\LaravelStubs\\": "src"
         }
     },
-    "config": { 
+    "config": {
         "sort-packages": true
     },
     "extra": {
@@ -20,6 +20,11 @@
                 "AlogicProjects\\LaravelStubs\\StubsServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan alogic-stub:publish"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true
