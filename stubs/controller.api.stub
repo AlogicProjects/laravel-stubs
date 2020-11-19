@@ -1,0 +1,80 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+
+
+/**
+* @group {{ class }}
+*
+* APIs for
+* @authenticated
+*/
+
+class {{ class }} extends Controller
+{
+    /**
+    * {{ class }} - List
+    *
+    *
+    * @authorized
+    *
+    */
+    public function index()
+    {
+        //
+        $data = [];
+        return response()->json([ 'status'=>'success','data'=>$data ]);
+    }
+
+    /**
+    * {{ class }} - Create
+    *
+    * @authenticated
+    */
+    public function store(Request $request)
+    {
+        //
+        $data = new ;
+        return response()->json([ 'status'=>'success','data'=>$data ]);
+    }
+
+    /**
+    * {{ class }} - Show
+    *
+    * @authenticated
+    */
+    public function show($id)
+    {
+        //
+        $data = null;
+        return response()->json([ 'status'=>'success','data'=>$data ]);
+    }
+
+    /**
+    * {{ class }} - Update
+    *
+    * @authenticated
+    */
+    public function update(Request $request, $id)
+    {
+        //
+        $data = null;
+        return response()->json([ 'status'=>'success','data'=>$data ]);
+    }
+
+    /**
+    * {{ class }} - Destroy
+    *
+    * @authenticated
+    */
+    public function destroy($id)
+    {
+        //
+        $data = [];
+        return response()->json([ 'status'=>'success','data'=>$data ]);
+    }
+}

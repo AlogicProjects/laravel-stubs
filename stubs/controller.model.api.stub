@@ -1,0 +1,82 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+use {{ model }};
+
+/**
+* @group {{ model }}
+*
+* APIs for
+* @authenticated
+*/
+class {{ class }} extends Controller
+{
+    /**
+     * {{ model }} - List
+     *
+     */
+    public function index()
+    {
+        //
+        $data = {{ model }}::get();
+        return response()->json(['status'=>'success','data'=>$data]);
+    }
+
+    /**
+     * {{ model }} - Create
+     *
+     */
+    public function store(Request $request)
+    {
+        //
+
+        $data = new {{ model }};
+
+        return response()->json(['status'=>'success','data'=>$data]);
+    }
+
+    /**
+     * {{ model }} - Show
+     *
+     */
+    public function show({{ model }} ${{ modelVariable }})
+    {
+        //
+        $data = ${{ modelVariable }};
+
+        return response()->json(['status'=>'success','data'=>$data]);
+    }
+
+    /**
+     * {{ model }} - Update
+     *
+     */
+    public function update(Request $request, {{ model }} ${{ modelVariable }})
+    {
+        //
+        ${{ modelVariable }}->save();
+
+        $data = ${{ modelVariable }};
+
+        return response()->json(['status'=>'success','data'=>$data]);
+    }
+
+    /**
+     * {{ model }} - Delete
+     *
+     */
+    public function destroy({{ model }} ${{ modelVariable }})
+    {
+        //
+        ${{ modelVariable }}->delete();
+
+        $data = {{ model }}::get();
+
+        return response()->json(['status'=>'success','data'=>$data]);
+    }
+}
